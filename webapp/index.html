@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style type="text/css">
+    .mt10 {
+        margin-top: 10px;
+    }
+
+    .w50 {
+        width: 50%;
+    }
+
+    .w100 {
+        width: 100%;
+    }
+
+    .mh150 {
+        min-height: 150px;
+    }
+    .tl {
+    	text-align: left;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 第一行 -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default mh150">
+                <div class="panel-heading">
+                    <h3 class="panel-title">0 背景音</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group w100">
+                        <input type="text" class="form-control insertAudio" placeholder="插入声音">
+                        <input type="text" class="form-control insertAudio mt10" placeholder="插入声音">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default mh150">
+                <div class="panel-heading">
+                    <h3 class="panel-title">1 宣布开始</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group w100">
+                        <input type="text" class="form-control insertAudio mt10" placeholder="插入声音">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mh150">
+            <div class="panel panel-default mh150">
+                <div class="panel-heading">
+                    <h3 class="panel-title">2 动作间间隔时间</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+				        	<button class="btn btn-default" type="button">随机秒数</button>
+				      	</span>
+                        <input type="text" class="form-control" placeholder="" value="1.5">
+                        <span class="input-group-btn">
+				        	<button class="btn btn-default" type="button">|</button>
+				      	</span>
+                        <input type="text" class="form-control" placeholder="" value="3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 第二行 -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">3 动作指示信号</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">4 听到信号后开始做动作时间</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">5 持续做动作的时间</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 第三行 -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">6 不触发动作的通知</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">7动作结束</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">8交换动作信号</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 第四行 -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">9 游戏结束信号</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">循环次数设置束</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">最后操作</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态层 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">插入音乐</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default openFileSelect">打开</button>
+                        <button type="button" class="btn btn-default">删除</button>
+                        <button type="button" class="btn btn-default" disabled>试听</button>
+                    </div>
+                </div>
+                <div class="modal-footer tl">
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</html>
